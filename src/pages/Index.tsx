@@ -124,7 +124,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-hero py-20 px-4">
         <div className="container mx-auto text-center text-white">
@@ -132,7 +132,7 @@ const Index = () => {
             <Badge className="bg-white/10 text-white border-white/20 hover:bg-white/20 text-sm px-4 py-2">
               Join the innovation revolution
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               PITCH YOUR IDEAS,
               <br />
@@ -140,12 +140,12 @@ const Index = () => {
                 CONNECT WITH INNOVATORS
               </span>
             </h1>
-            
+
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Discover cutting-edge ideathons from top institutes worldwide. 
               Build, compete, and transform your ideas into reality.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <div className="relative">
@@ -165,7 +165,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            
+
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 text-white/90">
               <div className="flex items-center space-x-2">
@@ -183,7 +183,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/10 pointer-events-none" />
       </section>
@@ -203,7 +203,7 @@ const Index = () => {
                 Discover innovative challenges from leading institutes worldwide
               </p>
             </div>
-            
+
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm">
                 <Filter className="h-4 w-4 mr-2" />
@@ -262,3 +262,190 @@ const Index = () => {
 };
 
 export default Index;
+
+// import { useState } from "react";
+// import { Search } from "lucide-react";
+// import Header from "@/components/Header";
+// import IdeathonCard from "@/components/IdeathonCard";
+
+// // Import generated images
+// import techImage from "@/assets/ideathon-tech.jpg";
+// import aiImage from "@/assets/ideathon-ai.jpg";
+// import greenImage from "@/assets/ideathon-green.jpg";
+// import healthImage from "@/assets/ideathon-health.jpg";
+
+// const Index = () => {
+//   const [searchQuery, setSearchQuery] = useState("");
+
+//   // Mock data for ideathons
+//   const ideathons = [
+//     {
+//       id: "1",
+//       title: "AI-Powered Healthcare Solutions",
+//       description:
+//         "Build innovative AI solutions to revolutionize healthcare delivery and patient care experiences.",
+//       image: aiImage,
+//       institute: "MIT Tech Labs",
+//       deadline: "Dec 15, 2024",
+//       participants: 234,
+//       prize: "$10,000",
+//       category: "Healthcare",
+//       difficulty: "Advanced" as const,
+//     },
+//     {
+//       id: "2",
+//       title: "Sustainable Energy Innovation",
+//       description:
+//         "Create breakthrough technologies for renewable energy and sustainable living solutions.",
+//       image: greenImage,
+//       institute: "Stanford Green Lab",
+//       deadline: "Jan 20, 2025",
+//       participants: 156,
+//       prize: "$15,000",
+//       category: "Sustainability",
+//       difficulty: "Intermediate" as const,
+//     },
+//     {
+//       id: "3",
+//       title: "Next-Gen EdTech Platform",
+//       description:
+//         "Design the future of online learning with cutting-edge educational technology.",
+//       image: techImage,
+//       institute: "Harvard Innovation Hub",
+//       deadline: "Nov 30, 2024",
+//       participants: 189,
+//       prize: "$8,000",
+//       category: "Education",
+//       difficulty: "Beginner" as const,
+//     },
+//     {
+//       id: "4",
+//       title: "Digital Health Monitoring",
+//       description:
+//         "Develop smart solutions for continuous health monitoring and preventive care.",
+//       image: healthImage,
+//       institute: "Johns Hopkins Med",
+//       deadline: "Feb 14, 2025",
+//       participants: 312,
+//       prize: "$12,000",
+//       category: "Healthcare",
+//       difficulty: "Intermediate" as const,
+//     },
+//     {
+//       id: "5",
+//       title: "Smart City Infrastructure",
+//       description:
+//         "Build intelligent systems for urban planning and smart city development.",
+//       image: techImage,
+//       institute: "UC Berkeley Labs",
+//       deadline: "Mar 10, 2025",
+//       participants: 198,
+//       prize: "$20,000",
+//       category: "Smart Cities",
+//       difficulty: "Advanced" as const,
+//     },
+//     {
+//       id: "6",
+//       title: "Climate Change Solutions",
+//       description:
+//         "Innovative approaches to combat climate change through technology and policy.",
+//       image: greenImage,
+//       institute: "Oxford Climate Lab",
+//       deadline: "Apr 05, 2025",
+//       participants: 267,
+//       prize: "$18,000",
+//       category: "Climate",
+//       difficulty: "Advanced" as const,
+//     },
+//     {
+//       id: "7",
+//       title: "Mental Health Tech",
+//       description: "Digital solutions for mental health support and wellness platforms.",
+//       image: healthImage,
+//       institute: "Yale Wellness Center",
+//       deadline: "Jan 08, 2025",
+//       participants: 143,
+//       prize: "$9,000",
+//       category: "Healthcare",
+//       difficulty: "Beginner" as const,
+//     },
+//     {
+//       id: "8",
+//       title: "Blockchain for Good",
+//       description:
+//         "Harness blockchain technology for social impact and transparency initiatives.",
+//       image: techImage,
+//       institute: "MIT Blockchain Lab",
+//       deadline: "Feb 28, 2025",
+//       participants: 221,
+//       prize: "$14,000",
+//       category: "Blockchain",
+//       difficulty: "Intermediate" as const,
+//     },
+//   ];
+
+//   const filteredIdeathons = ideathons.filter(
+//     (ideathon) =>
+//       ideathon.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+//       ideathon.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+//       ideathon.institute.toLowerCase().includes(searchQuery.toLowerCase())
+//   );
+
+//   return (
+//     <div className="min-h-screen bg-background">
+//       <Header />
+
+//       {/* Hero Section (screenshot style) */}
+//       <section className="flex flex-col items-center justify-center text-center bg-[#7C3AED] py-20 px-6">
+//         {/* Main Heading */}
+//         <h1 className="text-5xl font-extrabold text-white text-center leading-tight">
+//           PITCH YOUR PROJECT
+//         </h1>
+//         <h2 className="text-5xl font-extrabold text-white text-center leading-tight mt-2">
+//           CONNECT WITH INNOVATORS
+//         </h2>
+//         <p className="text-lg text-white text-center mt-4">
+//           Launch Your Vision, Build Your Network, and Scale Your Innovation.
+//         </p>
+
+//         {/* Search Bar */}
+//         <div className="w-full max-w-2xl">
+//           <div className="flex items-center bg-white rounded-full px-4 py-3 shadow-lg">
+//             <Search className="text-gray-500 h-5 w-5 mr-3" />
+//             <input
+//               type="text"
+//               placeholder="Search Startups"
+//               value={searchQuery}
+//               onChange={(e) => setSearchQuery(e.target.value)}
+//               className="flex-1 outline-none text-gray-800 placeholder-gray-500 text-base font-medium"
+//             />
+//             <button className="bg-black text-white rounded-full p-3 hover:bg-gray-800 transition">
+//               <Search className="h-4 w-4" />
+//             </button>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Results Section */}
+//       <section className="section_container">
+//         <p className="text-30-semibold mb-6">
+//           {searchQuery
+//             ? `Search Results for: "${searchQuery}"`
+//             : `Featured Ideathons`}
+//         </p>
+
+//         {filteredIdeathons.length > 0 ? (
+//           <ul className="card_grid">
+//             {filteredIdeathons.map((ideathon) => (
+//               <IdeathonCard key={ideathon.id} {...ideathon} />
+//             ))}
+//           </ul>
+//         ) : (
+//           <p className="no-results">No ideathons found</p>
+//         )}
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Index;
